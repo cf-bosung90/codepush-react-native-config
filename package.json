@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "codepush-staging": "appcenter codepush release-react -a cf_eric/Test -d Staging",
     "test": "jest"
   },
   "dependencies": {
