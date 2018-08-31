@@ -31,7 +31,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new CodePush(null, getApplicationContext(), BuildConfig.DEBUG),
+          new CodePush("QanV_-YERTycFvPxntD8gjpg4xyXHytt4qIwX", getApplicationContext(), BuildConfig.DEBUG),
           new ReactNativeConfigPackage()
       );
     }
