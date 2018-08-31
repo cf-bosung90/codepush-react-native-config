@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "run-android-release": "react-native run-android --variant=release",
+    "run-android-release-production": "ENVFILE=.env.production react-native run-android --variant=release",
     "codepush-staging": "appcenter codepush release-react -a cf_eric/Test -d Staging -m",
     "test": "jest"
   },

@@ -11,10 +11,20 @@ const instructions = Platform.select({
 })
 
 class App extends Component {
+  state = {}
+  componentDidMount() {
+    codePush.getUpdateMetadata().then(metadata => {
+      metadata &&
+        this.setState({
+          label: metadata.label,
+        })
+    })
+  }
   render() {
     return (
       <View style={styles.container}>
         <Text>{Config.SOMEVAR}</Text>
+        {!!this.state.label && <Text>codepush label: {this.state.label}</Text>}
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
